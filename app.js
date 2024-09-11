@@ -1,4 +1,4 @@
-const { json } = require("express");
+// const { json } = require("express");
 
 console.log("Hello world");
 
@@ -19,10 +19,10 @@ console.log(Language);
 
 var Language = "JavaScript";
 
-{
-  let Gender = "Female";
-}
-console.log(Gender);
+// {
+//   let Gender = "Female";
+// }
+// console.log(Gender);
 let Gender = "Male";
 
 // DataTypes in Javascript
@@ -42,6 +42,7 @@ console.log(sentence);
 let hungry = true;
 console.log(typeof hungry);
 
+// Object 
 let Person = {
   Name: "Tomaket",
   Age: 18,
@@ -64,7 +65,7 @@ let empty = "";
 console.log(typeof empty);
 
 // Types of Datatypes in js
-// primitive datatypes
+// primitive datatypes isnt modifyable 
 // 1. Numbers - Integers, floats
 //  2. Strings - Any data under single quote, double quote or backtick quote
 //  3. Booleans - true or false value
@@ -130,7 +131,7 @@ console.log(result);
 
 
 // Escape Sequences in Strings
-console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?') // line break
+console.log("I hope everyone is enjoying the 30 'Days Of JavaScript challenge.\n Do you ?\'") // line break
 console.log('Days\tTopics\tExercises')
 console.log('Day 1\t3\t5')
 console.log('Day 2\t3\t5')
@@ -139,7 +140,7 @@ console.log('Day 4\t3\t5')
 console.log('This is a backslash  symbol (\\)') // To write a backslash
 console.log("In every programming language it starts with \'Hello, World!' " )
 console.log("In every programming language it starts with \'Hello, World!\'")
-console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
+console.log('The saying \'Seeing is Believing \' isn\'t correct in 2020')
 
 // Strings Method in js 
 let Country = 'Nigeria'
@@ -148,23 +149,170 @@ let another =words.concat(' is a country')
 console.log(another);
 
 
-// conditional statements in javascript 
-let leaving = false;
-let currentTime = 258
-let choiceOfLeaving = true
-let time = 300
+// conditional statements in js 
+// if tenary switch 
 
-// if(currentTime >= time ){
-//     console.log('she is leaving the class');   
-// }else {
-//     console.log('she is not leaving the class');
-// }
+let raining = true 
+let weather = 'cloudy'
 
-if(currentTime >= time){
-    console.log('she is leaving the class');
-}else if(choiceOfLeaving){
-    console.log('I am tired i want Go');
+if(raining == false){
+  console.log('Rain is falling'); 
+}else if(weather == 'cloudy'){
+  console.log('it might Rain today');
 }else{
-    console.log('she is not leaving the class');
+  console.log('Rain is not falling'); 
 }
 
+// tenary Operators
+
+weather == 'cloudy' ? console.log('it might rain today') : console.log(' rain is not falling');
+
+// logical symbols 
+
+console.log(10 == '10');
+console.log(true && true);
+console.log(true || false);
+console.log('dog'.length == 'cat'.length);
+console.log('dog'.length !== 'cat'.length);
+console.log('4' !== 4);
+console.log('4' != 4);
+console.log('book'.length !== 'food'.length);
+console.log('book'.length != 'food'.length);
+console.log(20 > 20);
+console.log(100 >= 100);
+console.log(50 < 100);
+
+
+
+let speed = 100
+
+if(speed == 100 || speed > 50){
+  console.log('the value is btw 0 to 100');
+}
+
+// switch operators 
+let today = 'Wednesday'
+
+switch(today){
+  case 'Monday':
+    console.log('Today is Monday');
+  break;
+
+  case 'Tuesday':
+    console.log('Today is Tuesday');
+  break;
+
+  case 'Wednesday':
+    console.log('Today is Wednesday');
+  break;
+
+  case 'Thursday':
+    console.log('Today is Thursday');
+  break;
+  case 'friday':
+    console.log('Today is Friday');
+  break;
+  case 'satuday':
+    console.log('Today is saturday');
+  break;
+  case 'sunday':
+    console.log('Today is sunday');
+  break;
+
+  default:
+    console.log('I dont know what today is');
+    break;
+}
+
+// function a block of code that does something whenever it's called
+// function declaration 
+// anonymous function 
+// arrow function 
+// iife function
+
+function Greet(){
+  let x = 40
+  let y = 60
+  return x + y
+}
+console.log(Greet());
+
+
+
+function Greet(x, y){
+  console.log(x + y);
+}
+
+Greet(40, 60)
+
+
+let func = function(){
+
+}
+
+
+let arrow = ()=>{
+
+}
+
+((function(){
+  console.log('i am running');
+})())
+
+let figure = document.querySelector('.figure')
+let Increment = document.querySelector('.Increment')
+let Decrement = document.querySelector('.Decrement')
+let Score = 0
+console.log(Score);
+
+
+Increment.onclick = function () {
+  Score += 1
+  figure.innerHTML = Score
+}
+Decrement.onclick = function () {
+  Score -= 1
+  figure.innerHTML = Score
+}
+
+
+// strings and strings method in javascript
+let theirName = 'E mmanuel'
+console.log(theirName.split(' '));
+console.log(theirName.length);
+
+console.log(theirName.replace('nuel', 'kachi' ));
+console.log(theirName.substring(0,3));
+console.log(theirName.slice(0,-1));
+
+console.log(theirName.concat('Bizmarrow'));
+console.log(theirName.endsWith('kachi'));
+
+let sentences = 'Bread'
+// search = RegExp()
+console.log(sentences.match(/ Bread/));
+
+
+// g: global case 
+// i: case insensitive 
+// m: mutline search 
+
+const regex = /hello/i;
+console.log(regex.test('Hello world')); // true
+
+var str = "hello world!";
+console.log(str.match(/hello/)); // ['hello']
+
+const str = "hello world!";
+const newStr = str.replace(/hello/, 'Hi');
+console.log(newStr); // 'Hi world!'
+
+
+const str = "apple,banana,cherry";
+const fruits = str.split(/,/);
+console.log(fruits); // ['apple', 'banana', 'cherry']
+
+
+const email = "example@mail.com";
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+console.log(emailRegex.test(email)); // true or false
