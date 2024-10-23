@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: lightgray;
+}
+
+.player {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #ddd;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: transparent;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    border: 2px solid #FFFAFA;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 6px 5px black;
+}
+
+.now-playing {
+    font-size: 1rem;
+}
+
+.track-name {
+    font-size: 2.5rem;
+}
+
+.track-artist {
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.active {
+    color: black;
+}
+
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1.0;
+}   
+
+.slider_container{
+    
+}

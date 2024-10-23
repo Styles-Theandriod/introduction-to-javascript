@@ -1,0 +1,43 @@
+// nodejs  chrome
+// code runner VScode
+// Error lens
+
+console.log("hello world");
+
+// let const var
+const x = 5;
+let y = 10;
+var z = 15;
+
+y = 35;
+z = 90;
+console.log(z);
+
+// Types of Data
+// primitive Data and non primitive Data types
+
+// primitive DataTypes
+// Number, String, Boolean, Undefined, Null, Symbol, BigInt.
+
+// non primitive Data types
+// Object, Array, Function, Date, RegExp.
+
+// Working with Data Types and Variables
+const num = 5;
+const string = "i am a Programmer";
+const Boo = true;
+let Undefined = undefined;
+const Null = null;
+
+const bigNumber = 1234567890123456789012345678901234567890n;
+console.log(bigNumber);
+console.log(x);
+
+let obj = {'Name':'emmanuel', 'Age':50}
+
+let arr = ['emmanuel', 'chidi', 'ogbonna', 'chidimma']
+
+function greet(){
+    console.log('hello world');
+}
+greet()
