@@ -63,6 +63,7 @@ function loadTrack(track_index){
     reset()
 
     curr_track.src = music_list[track_index].music
+    
 }
 
 
