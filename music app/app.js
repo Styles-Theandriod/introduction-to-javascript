@@ -69,13 +69,49 @@ function loadTrack(track_index){
     track_name.textContent = music_list[track_index].name
     track_artist.textContent = music_list[track_index].artist
     now_playing.textContent = 'Playing music' + (track_index + 1) + 'of' + music_list.length
+
+    updateTimer = setInterval(setUpdate, 1000)
+
+    curr_track.addEventListener('ended', nextTrack)
+    random_bg_color()
 }
 
+function random_bg_color(){
+    let hex = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+    
+    let a;
+
+    function populate(a){
+        for(let i =0; i <= 6; i++){
+            let x = Math.round(Math.random() * 14)
+            let y = hex[x]
+            a += y
+            a = a + y
+        }
+        return a
+    }
+
+}
+
+
+
+
+// console.log(Math.round(10.6));
 
 // setInterval
 // setTimeout
 // clearInterval
 // clearTimeout
+
+// iife function 
+// anonymous function 
+// arrow function 
+
+// (((function)){
+//     console.log('hello world');
+    
+// }())
+
 
 
 
@@ -83,3 +119,15 @@ setInterval(() => {
     console.log('Good morning sir');
 }, 2000);
 
+// IIFE (Immediately Invoked Function Expression)
+(function(){
+    console.log('hello world');
+    
+})()
+
+
+const myFunction = ()=>{
+    console.log('hello world');
+}
+
+myFunction()
