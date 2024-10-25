@@ -22,27 +22,27 @@ let updateTimer;
 
 const music_list = [
     {
-        img:'',
-        name:'',
-        artist:'',
+        img:'http://picsum.photos/200/300',
+        name:'micheal jackson',
+        artist:'micheal jackson',
         music:''
     },
     {
-        img:'',
-        name:'',
-        artist:'',
+        img:'http://picsum.photos/200/300',
+        name:'micheal jackson',
+        artist:'micheal jackson',
         music:''
     },
     {
-        img:'',
-        name:'',
-        artist:'',
+        img:'http://picsum.photos/200/300',
+        name:'micheal jackson',
+        name:'micheal jackson',
         music:''
     },
     {
-        img:'',
-        name:'',
-        artist:'',
+        img:'http://picsum.photos/200/300',
+        name:'micheal jackson',
+        artist:'micheal jackson',
         music:''
     }
 ];
@@ -90,8 +90,79 @@ function random_bg_color(){
         }
         return a
     }
+    let color1 = populate('#039')
+    let color2 = populate('#039')
 
+    let gradient = 'linear-gradient(to right,' + color1 + ',' + color2 + ')'
+    // let gradient = `linear-gradient(to right, ${color1}, ${color2})`
+    // document.body.style = `background: ${gradient}`
+    document.body.style.background = gradient
 }
+
+function reset() {
+    current_time.textContent = '00:00'
+    total_duration.textContent = '00:00'
+    seek_slider.value = 0
+}
+
+function randomTrack(){
+    isRandom ? pauseRandom() : playRandom()
+}
+
+function playRandom(){
+    isRandom = true
+    randomIcon.classList.add('randomActive')
+}
+
+function pauseRandom(){
+    isRandom = false
+    randomIcon.classList.remove('randomActive')
+}
+
+
+function repeatTrack(){
+    let current_track = track_index
+    loadTrack(current_track)
+    playTrack()
+}
+
+function playpauseTrack(){
+    if(is_playing){
+        pauseTrack()
+    }else{
+        playTrack()
+    }
+}
+
+function playTrack(){
+    curr_track.play()
+    is_playing = true
+    track_art.classList.add('rotate')
+    wave.classList.add('loader')
+    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>'
+}
+
+function nextTrack(){
+    if(track_index < music_list.length - 1){
+        track_index += 1
+    }else{
+        track_index = 0
+    }
+    loadTrack(track_index)
+}
+
+// tenary if 
+
+// textContent
+// innerHTML
+// innerText
+// ?then : else 
+
+// a = 10
+// b = 20
+
+// a > b ? console.log('a is greater than b') : console.log('b is greater than a')
+
 
 
 
