@@ -149,7 +149,22 @@ function nextTrack(){
         track_index = 0
     }
     loadTrack(track_index)
+    playTrack()
 }
+
+function seek_To(){
+    let seekTo = curr_track.duration * (seek_slider.value / 100)
+    curr_track.currentTime = seekTo
+}
+
+function setVolume(){
+    curr_track.volume = volume_slider.value / 100
+}
+
+function setUpdate(){
+    
+}
+
 
 // tenary if 
 
