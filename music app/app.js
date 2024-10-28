@@ -200,6 +200,15 @@ function setUpdate(){
 
 
 
+// javascript is a single threaded language 
+// form validation 
+// calculator app 
+// finiancial app 
+// background changer 
+
+
+
+
 
 setInterval(() => {
     console.log('Good morning sir');
